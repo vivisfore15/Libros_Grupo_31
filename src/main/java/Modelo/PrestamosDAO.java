@@ -71,6 +71,8 @@ public class PrestamosDAO {
 		}
 		return resul;
 	}
-     
+	
+	
+ 
 	
 }
