@@ -80,4 +80,20 @@ public class LibroDAO {
 		}
 		return resul;
 	}
+	
+	public boolean Cargar_Libros(String Url) {
+		boolean resul=false;
+		try {
+		String sql="load data infile '"+Url+"' into table libro fields terminated by ',' lines terminated by '\r\n'";
+		ps = con.prepareStatement(sql);
+		//ps.setString(1, Url);
+		resul=ps.executeUpdate()>0;
+		}catch(SQLException ex) {
+			JOptionPane.showMessageDialog(null,"error al insertar Libros: "+ex);
+		}
+		return resul;
+		
+	}
+	
+
 }

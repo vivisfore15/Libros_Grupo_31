@@ -17,7 +17,6 @@ isbn=request.getParameter("isbn");
 if(request.getParameter("men")!=null){
 String mensaje=request.getParameter("men");
 out.print("<script>alert('"+mensaje+"');</script>");//Mensaje con alert js
-out.print("<script>alert('"+mensaje+"');</script>");//Mensaje con alert js
 }
 %>
 <form action="Prestamo" method="post">
