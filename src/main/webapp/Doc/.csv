@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--Esto es un comentario-->
+
+<head>
+    <title>Aprendiendo Html</title>
+</head>
+
+<body>
+    Hola Muchachos
+    <!--Encabezados-->
+    <h1>Hola Muchachos con H1</h1>
+    <h2>Hola Muchachos con H2</h2>
+    <h3>Hola Muchachos con H3</h3>
+    <h6>Hola Muchachos con H6</h6>
+
+    <hr>
+    <!--Estructura de pagina web-->
+    <header>
+        Inicio Mision Productos Contactenos
+    </header>
+    <main>
+        <h1>Titulo Principal</h1>
+        <h2>SubTitulo</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis eos blanditiis quis tempore eaque consectetur soluta similique labore debitis, laborum laboriosam, vero beatae eveniet dolorum quibusdam distinctio veritatis aliquam!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor adipisci nemo deserunt quo labore quas tempora corrupti doloremque ut sequi, iure modi at dolorem perspiciatis blanditiis? Necessitatibus ipsum officiis porro.</p>
+        <h2 id="Sub2">SubTitulo No 2</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas atque explicabo sed aliquam pariatur a deserunt quos, veniam, similique qui, possimus eos blanditiis? Minus minima eveniet quia velit numquam officia?</p>
+        <h3>SubTitulo del SubTitulo</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum dolores molestias numquam voluptatem aperiam fuga voluptatibus eos deleniti aut ut explicabo, optio nesciunt magni accusantium sequi est tenetur? Placeat, fugiat.</p>
+    </main>
+    <footer>
+        Derechos Reservados
+    </footer>
+    <hr>
+    <!--Secciones-->
+    <section>
+        <h2>Mision Tic 2022</h2>
+        <h3>Universidad del Bosque</h3>
+        <article>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae magnam, laborum quasi consequuntur odit deleniti culpa vero. Corporis, repellat tempore. Dolores aspernatur saepe impedit iste fugiat quo nam. Rem, voluptate.</p>
+            <footer>
+                Terminando texto1
+            </footer>
+        </article>
+    </section>
+
+    <article>
+        <section>
+            <header>Encabezado</header>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus commodi reiciendis repellat cupiditate nisi quas id minima quo ad, eveniet dolore recusandae? Alias aperiam porro et fugit quod dolor.</p>
+            <footer>Pie</footer>
+        </section>
+    </article>
+    <br><br><br>
+    <hr>
+    <!--Etiquetas de linea-->
+    <p>Lorem ipsum dolor, <strong>consectetur adipisicing elit</strong> amet consectetur adipisicing elit. Illum aspernatur sapiente magnam reprehenderit ratione, aliquid est repellat nulla maxime laborum tenetur <b>dolores</b> , praesentium tempore. Laboriosam
+        tempore <i>sapiente</i> <u>voluptatibus</u> adipisci labore.</p>
+
+</body>
+
+</html>

@@ -115,8 +115,11 @@ public class Libro extends HttpServlet {
 			Part archivo=request.getPart("archivo");
 			String nombre=request.getParameter("nombreArch");
 			//JOptionPane.showMessageDialog(null, archivo.getSubmittedFileName());
-			String Url="C:\\Users\\vivis\\eclipse-workspace\\Prestamos_31\\src\\main\\webapp\\Doc\\";
-			//JOptionPane.showMessageDialog(null, Url);
+			//String Url="C:/Users/vivis/eclipse-workspace/Prestamos_31/src/main/webapp/Doc/";
+			//Desde Mysql : show variables like 'secure_file_priv'
+			String Url="C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/";
+			///JOptionPane.showMessageDialog(null, archivo.getContentType());
+			if(archivo.getContentType().equals("application/vnd.ms-excel")) {
 			try {
 			InputStream file= archivo.getInputStream();	
 			File copia = new File(Url+nombre+".csv");
@@ -130,14 +133,15 @@ public class Libro extends HttpServlet {
 			file.close();
 			JOptionPane.showMessageDialog(null, "Archivo Cargado Correctamente");
 			if(libDao.Cargar_Libros(Url+nombre+".csv")) {
-				JOptionPane.showMessageDialog(null, "Libros Registrado Correctamente");
+				response.sendRedirect("Libros.jsp?men=Libros Registrado Correctamente");
 			}
 			else {
-				JOptionPane.showMessageDialog(null, "Libros no se Registraron");
+				response.sendRedirect("Libros.jsp?men=Libros no se Registraron");
 			}
 			}catch(Exception e) {
 				JOptionPane.showMessageDialog(null, "Error al cargar Archivo"+e);
 			}
+		}else {	response.sendRedirect("Libros.jsp?men=Formato de Archivo no permitido");}
 		}
 		
 
