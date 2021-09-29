@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.PrintWriter;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -13,6 +15,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 import javax.swing.JOptionPane;
+
+import com.google.gson.Gson;
 
 import Modelo.LibroDAO;
 import Modelo.LibroDTO;
@@ -144,7 +148,13 @@ public class Libro extends HttpServlet {
 		}else {	response.sendRedirect("Libros.jsp?men=Formato de Archivo no permitido");}
 		}
 		
-
+        //Formato JSON para cargar select, cuando cargue el jsp
+		
+		PrintWriter salida= response.getWriter();
+		ArrayList<LibroDTO> lista=new ArrayList<>();
+		lista=libDao.cargar_select();
+		Gson datos= new Gson();
+		salida.println(datos.toJson(lista));
 		}
 		
 }

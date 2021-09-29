@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
@@ -93,6 +94,23 @@ public class LibroDAO {
 		}
 		return resul;
 		
+	}
+	
+	public ArrayList<LibroDTO> cargar_select(){
+		
+		LibroDTO lib=null;
+		ArrayList<LibroDTO> lista= new ArrayList<>();
+		try {
+		String sql="select * from libro";
+		ps= con.prepareStatement(sql);
+		res=ps.executeQuery();
+		while(res.next()) {
+			lib= new LibroDTO(res.getString(1),res.getString(2),res.getString(3),res.getString(4),res.getInt(5));
+		    lista.add(lib);
+		}
+		}catch(SQLException ex) {}
+		
+		return lista;
 	}
 	
 
