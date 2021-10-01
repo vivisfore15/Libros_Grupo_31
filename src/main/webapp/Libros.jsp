@@ -4,6 +4,8 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="js/libro.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
@@ -62,5 +64,8 @@ out.print("<script>alert('"+mensaje+"');</script>");//Mensaje con alert js
 <input type="file" value="Examinar" name="archivo"></div>
 <div><input type="submit" name="cargar" value="Cargar Archivo"></div>
 </form>
+
+
+
 </body>
 </html>

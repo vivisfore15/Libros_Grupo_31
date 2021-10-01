@@ -155,6 +155,8 @@ public class Libro extends HttpServlet {
 		lista=libDao.cargar_select();
 		Gson datos= new Gson();
 		salida.println(datos.toJson(lista));
+		
+	}
 		}
 		
-}
+

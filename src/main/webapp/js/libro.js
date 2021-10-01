@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	
+
 cargaLibros();
 
 function cargaLibros(){
@@ -8,6 +9,7 @@ $.ajax({
  type:"post",
  url:"Libro",
  dataType:"json",
+ data:{op:"select"},
  success: function(result){
 	console.log(result);
 	let datos=document.querySelector(".listaLibros")
@@ -20,5 +22,5 @@ $.ajax({
 	
 });	
 }	
-	
+
 });
