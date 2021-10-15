@@ -118,10 +118,13 @@ public class Libro extends HttpServlet {
 		if(request.getParameter("cargar")!=null) {
 			Part archivo=request.getPart("archivo");
 			String nombre=request.getParameter("nombreArch");
+			String Url=getServletContext().getRealPath("/Doc/");
+			Url= Url.replace("Build\\","");
+			JOptionPane.showMessageDialog(null, Url+nombre);
 			//JOptionPane.showMessageDialog(null, archivo.getSubmittedFileName());
 			//String Url="C:/Users/vivis/eclipse-workspace/Prestamos_31/src/main/webapp/Doc/";
 			//Desde Mysql : show variables like 'secure_file_priv'
-			String Url="C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/";
+			//String Url="C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/";
 			///JOptionPane.showMessageDialog(null, archivo.getContentType());
 			if(archivo.getContentType().equals("application/vnd.ms-excel")) {
 			try {

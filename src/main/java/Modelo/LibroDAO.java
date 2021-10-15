@@ -68,7 +68,7 @@ public class LibroDAO {
 	public boolean Actualizar_Libro(LibroDTO lib) {
 	    boolean resul=false;
 		try {
-		String sql="update libro set titulo=?, editorial=?, autor=?, No_paginas=? where isbn=?";
+		String sql="update libro set titulo=?, editorial=?, autor=?, Nro_paginas=? where isbn=?";
 		ps = con.prepareStatement(sql);
 		ps.setString(1, lib.getTitulo());
 		ps.setString(2, lib.getEditorial());
